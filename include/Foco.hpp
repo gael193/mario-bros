@@ -1,36 +1,29 @@
 #include<stdexcept>
 
-class Foco
-{
+class Foco{
 private:
     int numero;
     int encendido;
 
 public:
-    Foco()
-    {
+    Foco(){
         this->numero = 0;
         this->encendido = false;
     }
-    Foco(int numero)
-    {
+    Foco(int numero){
         this->encendido = false;
-        if (numero > 100 || numero < 0)
-        {
+        if (numero > 100 || numero < 0){
             throw new std::runtime_error("Numero fuera de rango.");
         }
-        else
-        {
+        else{
             this->numero = numero;
         }
     }
     ~Foco() {}
-    void Incrementar(int numero)
-    {
+    void Incrementar(int numero){
         this-> numero += numero;
     }
-    void Disminuir(int numero)
-    {
+    void Disminuir(int numero){
         this-> numero -= numero;
     }
 
@@ -53,3 +46,5 @@ public:
         }
     }
 };
+
+
